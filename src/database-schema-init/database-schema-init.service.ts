@@ -1,9 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { MikroORM } from '@mikro-orm/mysql';
 
-import { getEnv } from '@/config';
-import { DatabaseSchemaInitOptions } from './database-schema-init-options.interface';
-
 @Injectable()
 export class DatabaseSchemaInitService {
   private readonly logger = new Logger(DatabaseSchemaInitService.name);

@@ -2,7 +2,6 @@ import { Module, OnModuleInit } from '@nestjs/common';
 import { MikroORM } from '@mikro-orm/mysql';
 
 import { DatabaseSchemaInitService } from './database-schema-init.service';
-import { DatabaseSchemaInitOptions } from './database-schema-init-options.interface';
 
 @Module({})
 export class DatabaseSchemaInitModule implements OnModuleInit {
