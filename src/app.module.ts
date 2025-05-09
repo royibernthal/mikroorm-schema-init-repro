@@ -11,7 +11,7 @@ import { DatabaseSchemaInitModule } from '@/database-schema-init';
   imports: [
     ConfigModule.forRoot({ load: [loadConfig] }), // must be first, as env vars are needed for configuring other modules
     MikroOrmModule.forRoot({
-      ...databaseConfig(), // env is still no loaded at this point soc an't use getEnv()
+      ...databaseConfig(), // env is still no loaded at this point so can't use getEnv()
       driver: MySqlDriver,
       entities: [BaseEntity], // base entities need to be included in forRoot() as they don't have their own repositories
       autoLoadEntities: true,
